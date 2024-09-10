@@ -9,18 +9,61 @@
             margin: 0;
             height: 100vh;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(to bottom, #00008B, #1E90FF); /* Dark blue to another blue */
+            flex-direction: column;
+            justify-content: center; /* Centers items vertically */
+            align-items: center; /* Centers items horizontally */
+            background: linear-gradient(to bottom, #000022, #000066); /* Darker blue gradient */
             color: white;
             font-family: Arial, sans-serif;
         }
         h1 {
             font-size: 5em;
+            font-weight: bold; /* Makes the font bold */
+            margin-bottom: 10px; /* Adds space between the text and the buttons */
+        }
+        h2 {
+            font-size: 2em; /* Adjust this value to change the size */
+            font-weight: bold; /* Makes the font bold */
+            margin-bottom: 20px; /* Adds space between the text and the buttons */
+        }
+        .button-container {
+            display: flex;
+            gap: 20px; /* Adds space between the buttons */
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 1.5em;
+            color: white;
+            background: linear-gradient(to bottom, #000044, #000088); /* Similar to background */
+            border: none;
+            border-radius: 10px; /* Rounded corners */
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adds a shadow */
+            transition: background 1s, transform 0.3s; /* Smooth transition for hover effects */
+        }
+        .button:hover {
+            background: linear-gradient(to bottom, #000033, #000077); /* Darker hover color */
+            transform: scale(1.05); /* Slightly enlarges the button on hover */
         }
     </style>
+    <script>
+        function openBlooketAndRunScript(scriptName) {
+            const newWindow = window.open('https://www.blooket.com/play', '_blank');
+            newWindow.onload = function() {
+                const script = newWindow.document.createElement('script');
+                script.src = scriptName; // Path to your JavaScript file
+                newWindow.document.head.appendChild(script);
+            };
+        }
+    </script>
 </head>
 <body>
     <h1>DUB5</h1>
+    <h2>Blooket Hacks:</h2>
+    <div class="button-container">
+        <button class="button" onclick="openBlooketAndRunScript('script.js')">Blooket Hack 1</button>
+        <button class="button" onclick="openBlooketAndRunScript('script2.js')">Blooket Hack 2</button>
+    </div>
 </body>
 </html>
