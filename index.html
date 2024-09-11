@@ -9,19 +9,40 @@
             margin: 0;
             height: 100vh;
             display: flex;
-            justify-content: center; /* Centers items horizontally */
-            align-items: center; /* Centers items vertically */
-            background: linear-gradient(to bottom, #000022, #000066); /* Darker blue gradient */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #000022, #000066);
             color: white;
             font-family: Arial, sans-serif;
         }
         h1 {
-            font-size: 5em; /* Adjust this value to change the size */
-            font-weight: bold; /* Makes the font bold */
+            font-size: 5em;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 1.5em;
+            color: white;
+            background: linear-gradient(to bottom, #000044, #000088);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background: linear-gradient(to bottom, #000033, #000077);
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
     <h1>I HATE NIMNIM</h1>
+    <button class="button" onclick="window.open('https://play.blooket.com', '_blank')">
+        Open Blooket
+    </button>
 </body>
 </html>
